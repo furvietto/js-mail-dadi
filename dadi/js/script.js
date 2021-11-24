@@ -18,8 +18,8 @@ button.addEventListener("click", function () {
 
 
    if (user > computer) {
-       testo.innerHTML = "ha vinto l'utente";
+       testo.innerHTML = "<h1> ha vinto l'utente </h1>";
    } else {
-    testo.innerHTML = "ha vinto il computer";
+    testo.innerHTML = "<h1> ha vinto il computer </h1>";
    }
 })

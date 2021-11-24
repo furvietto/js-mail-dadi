@@ -15,9 +15,13 @@ const input = document.querySelector("input");
 const container = document.querySelector(".container");
 const mails = ["fulvio-94@gmail.com", "fulvio-94@gmails.it" , "thomas-23@teacher.it" , "elisabetta@-24teacher.it"]
 const button = document.querySelector("button"); 
-
+const remove = document.querySelector(".remove") 
 let cond = false;
 
+remove.addEventListener("click" , function () {
+    container.innerHTML = "";
+    input.value = "";
+})
 
 button.addEventListener("click" , function() {
     for (let i = 0; i < mails.length; i++) {
