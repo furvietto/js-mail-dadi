@@ -10,20 +10,25 @@
 // Iniziate dalla parte base, se tutto funziona passiamo a fare dei check su casi limite, fatto questo passiamo a vedere se esistono dei metodi di JS che possono aiutarci.
 // I bonus sono sempre da fare in cartella separata.
 
-const mail = prompt("dammi la tua mail");
-
+// const mail = prompt("dammi la tua mail");
+const input = document.querySelector("input");
+const container = document.querySelector(".container");
 const mails = ["fulvio-94@gmail.com", "fulvio-94@gmails.it" , "thomas-23@teacher.it" , "elisabetta@-24teacher.it"]
+const button = document.querySelector("button"); 
 
 let cond = false;
 
-for (let i = 0; i < mails.length; i++) {
-    if (mails[i] == mail) {
-        cond = true;
-    } 
-}
 
-if (cond == true) {
-    console.log("puoi accedere");
-} else {
-    console.log("non puoi accedere");
-}
+button.addEventListener("click" , function() {
+    for (let i = 0; i < mails.length; i++) {
+        if (mails[i] == input.value) {
+            cond = true;
+        } 
+    }
+    
+    if (cond == true) {
+        container.innerHTML = "<h1> puoi accedere bello </h1>"
+    } else {
+        container.innerHTML = "<h1>non puoi accedere bello </h1>"
+    }
+})
