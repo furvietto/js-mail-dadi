@@ -23,16 +23,27 @@ remove.addEventListener("click" , function () {
     input.value = "";
 })
 
+
+
 button.addEventListener("click" , function() {
-    for (let i = 0; i < mails.length; i++) {
-        if (mails[i] == input.value) {
-            cond = true;
-        } 
-    }
-    
-    if (cond == true) {
-        container.innerHTML = "<h1> puoi accedere bello </h1>"
+    if (input.value == "") {
+
+        alert("scrivi qualcosa prima");
+
     } else {
-        container.innerHTML = "<h1>non puoi accedere bello </h1>"
+
+        for (let i = 0; i < mails.length; i++) {
+            if (mails[i] == input.value) {
+                cond = true;
+            } 
+        }
+        
+        if (cond == true) {
+            container.innerHTML = "<h1> puoi accedere bello </h1>"
+        } else {
+            container.innerHTML = "<h1>non puoi accedere bello </h1>"
+        }
     }
+
+    
 })
